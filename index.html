@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Namaste React</title>
+  <link rel="stylesheet" href="index.css"/>
+ 
+</head>
+<body>
+  <div id="root">Not Rendered</div>
+ <!--using html tag everthing shuld be in root--> 
+  <div id="root">
+    <h1>Welcome to HTML</h1>
+  </div>
+ <!--Using Javascript-->
+ <script>
+//To write everything happens inside root .using DOM manipulation
+//create h1 tag in javascript 
+const jsheading=document.createElement("h1");
+jsheading.innerHTML="Namaste JavaScript";
+//to create inside root using appendChild
+const jsroot=document.getElementById("root");
+jsroot.appendChild(jsheading);
+ </script>
+ <!--Injecting React using CDN Links-->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+<!--<script>
+  //create h1 tag using React
+  const heading=React.createElement("h1",{
+    id:"title"
+  },"Welcome to React");
+  const heading1=React.createElement("h2",{
+    id:"title"
+  },"Namaste Everyone");
+  const container=React.createElement("div",{
+    id:"container"
+  },heading,heading1);
+  console.log(heading);
+  //to create heading inside root in react.rootis the place where the React runs
+  const root= ReactDOM.createRoot(document.getElementById("root"));
+  //passing react element inside root
+  //react will overwrite whatever inside root
+root.render(container);
+  
+</script>-->
+<script src="App.js"></script>
+
+  
+</body>
+
+</html>
